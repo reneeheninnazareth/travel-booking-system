@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="dashboard.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Upcoming|Travello</title>
+     
+</head>
+<body>
+   
+<a href="dashboard.html">Back</a>
+ </aside>
+    <section class="dashboard-section" id="upcoming-trips">
+
+        <div class="section-heading">
+          <div>
+            <h2>Upcoming Trips</h2>
+            <p>Your confirmed travel bookings</p>
+          </div>
+
+          <button class="view-button">View All</button>
+        </div>
+
+        <div class="trip-list">
+
+          <article class="trip-card">
+
+            <div class="trip-date">
+              <span>28</span>
+              <small>JUL</small>
+            </div>
+
+            <div class="trip-information">
+              <h3>Manipal to Mangalore Airport</h3>
+
+              <p>
+                <i class="fa-solid fa-clock"></i>
+                6:30 AM
+              </p>
+
+              <p>
+                <i class="fa-solid fa-car"></i>
+                Sedan
+              </p>
+            </div>
+
+            <div class="trip-status confirmed">Confirmed</div>
+
+          </article>
+
+          <article class="trip-card">
+
+            <div class="trip-date">
+              <span>05</span>
+              <small>AUG</small>
+            </div>
+
+            <div class="trip-information">
+              <h3>Udupi to Dharmasthala</h3>
+
+              <p>
+                <i class="fa-solid fa-clock"></i>
+                8:00 AM
+              </p>
+
+              <p>
+                <i class="fa-solid fa-car"></i>
+                Innova
+              </p>
+            </div>
+
+            <div class="trip-status pending">Pending</div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Booking History -->
+      <section class="dashboard-section" id="booking-history">
+
+        <div class="section-heading">
+          <div>
+            <h2>Recent Bookings</h2>
+            <p>Your latest completed trips</p>
+          </div>
+        </div>
+
+        <div class="table-container">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Route</th>
+                <th>Date</th>
+                <th>Vehicle</th>
+                <th>Fare</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>#RT1024</td>
+                <td>Manipal → Udupi</td>
+                <td>18 July 2026</td>
+                <td>Sedan</td>
+                <td>₹450</td>
+                <td>
+                  <span class="table-status completed">Completed</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#RT1019</td>
+                <td>Mangalore → Manipal</td>
+                <td>10 July 2026</td>
+                <td>Innova</td>
+                <td>₹1,850</td>
+                <td>
+                  <span class="table-status completed">Completed</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#RT1012</td>
+                <td>Udupi → Kollur</td>
+                <td>02 July 2026</td>
+                <td>SUV</td>
+                <td>₹2,400</td>
+                <td>
+                  <span class="table-status cancelled">Cancelled</span>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+      <!-- Saved Places -->
+      <section class="dashboard-section" id="saved-places">
+
+        <div class="section-heading">
+          <div>
+            <h2>Saved Places</h2>
+            <p>Quickly select your frequently used locations</p>
+          </div>
+        </div>
+
+        <div class="saved-places-grid">
+
+          <div class="saved-place-card">
+            <i class="fa-solid fa-house"></i>
+
+            <div>
+              <h3>Home</h3>
+              <p>Manipal, Karnataka</p>
+            </div>
+
+            <button class="small-button">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+          </div>
+
+          <div class="saved-place-card">
+            <i class="fa-solid fa-building-columns"></i>
+
+            <div>
+              <h3>College</h3>
+              <p>MITE, Moodabidri</p>
+            </div>
+
+            <button class="small-button">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+          </div>
+
+          <div class="saved-place-card add-place-card">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add New Place</p>
+          </div>
+
+        </div>
+
+      </section>
+</body>
+</html>
