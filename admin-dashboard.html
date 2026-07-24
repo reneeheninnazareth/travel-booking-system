@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Admin Dashboard | Travello</title>
+
+  <link rel="stylesheet" href="admin.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+
+    <aside class="sidebar" id="sidebar">
+
+      <div class="logo">
+        <i class="fa-solid fa-car-side"></i>
+        <span>Travello</span>
+      </div>
+
+      <nav class="sidebar-menu">
+
+        <a href="#" class="menu-link active">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="admin-bookings.html" class="menu-link">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Bookings</span>
+        </a>
+
+        <a href="admin-customers.html" class="menu-link">
+          <i class="fa-solid fa-users"></i>
+          <span>Customers</span>
+        </a>
+
+        <a href="admin-drivers.html" class="menu-link">
+          <i class="fa-solid fa-id-card"></i>
+          <span>Drivers</span>
+        </a>
+
+        <a href="admin-vehicles.html" class="menu-link">
+          <i class="fa-solid fa-car"></i>
+          <span>Vehicles</span>
+        </a>
+
+        <a href="admin-payments.html" class="menu-link">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <span>Payments</span>
+        </a>
+
+        <a href="admin-reviews.html" class="menu-link">
+          <i class="fa-solid fa-star"></i>
+          <span>Reviews</span>
+        </a>
+
+        <a href="admin-settings.html" class="menu-link">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </button>
+
+      </nav>
+
+    </aside>
+
+
+   
+    <main class="main-content">
+
+   
+      <header class="top-header">
+
+        <button class="menu-button" id="menuButton">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="header-title">
+          <h1>Admin Dashboard</h1>
+          <p>Manage bookings, drivers and customers</p>
+        </div>
+
+        <div class="profile-box">
+
+          <div class="profile-image">
+            A
+          </div>
+
+          <div class="profile-details">
+            <strong>Admin</strong>
+            <span>Administrator</span>
+          </div>
+
+        </div>
+
+      </header>
+      <section class="summary-grid">
+
+        <div class="summary-card">
+
+          <div class="summary-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+
+          <div>
+            <p>Total Bookings</p>
+            <h2>1,245</h2>
+          </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+          <div class="summary-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+
+          <div>
+            <p>Active Trips</p>
+            <h2>18</h2>
+          </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+          <div class="summary-icon">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+
+          <div>
+            <p>Total Revenue</p>
+            <h2>₹2,45,600</h2>
+          </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+          <div class="summary-icon">
+            <i class="fa-solid fa-hourglass-half"></i>
+          </div>
+
+          <div>
+            <p>Pending Bookings</p>
+            <h2>7</h2>
+          </div>
+
+        </div>
+
+      </section>
+
+
+  
+      <section class="dashboard-grid">
+
+  
+        <div class="chart-card">
+
+          <div class="section-heading">
+            <div>
+              <h2>Monthly Bookings</h2>
+              <p>Booking activity during the last six months</p>
+            </div>
+
+            <select id="chartYear">
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="bookingChart"></canvas>
+          </div>
+
+        </div>
+
+
+
+        <div class="driver-status-card">
+
+          <div class="section-heading">
+            <div>
+              <h2>Driver Status</h2>
+              <p>Current driver availability</p>
+            </div>
+          </div>
+
+          <div class="driver-status-list">
+
+            <div class="driver-status-item">
+
+              <div class="driver-info">
+                <div class="driver-avatar">R</div>
+
+                <div>
+                  <strong>Ravi Kumar</strong>
+                  <span>KA 19 AB 2345</span>
+                </div>
+              </div>
+
+              <span class="status available">
+                Available
+              </span>
+
+            </div>
+
+
+            <div class="driver-status-item">
+
+              <div class="driver-info">
+                <div class="driver-avatar">J</div>
+
+                <div>
+                  <strong>John D'Souza</strong>
+                  <span>KA 20 CD 6789</span>
+                </div>
+              </div>
+
+              <span class="status on-trip">
+                On Trip
+              </span>
+
+            </div>
+
+
+            <div class="driver-status-item">
+
+              <div class="driver-info">
+                <div class="driver-avatar">S</div>
+
+                <div>
+                  <strong>Suresh Naik</strong>
+                  <span>KA 19 EF 1122</span>
+                </div>
+              </div>
+
+              <span class="status offline">
+                Offline
+              </span>
+
+            </div>
+
+          </div>
+
+          <a href="admin-drivers.html" class="view-all-btn">
+            View All Drivers
+          </a>
+
+        </div>
+
+      </section>
+
+
+
+      <section class="recent-bookings-card">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>Recent Bookings</h2>
+            <p>Latest customer trip requests</p>
+          </div>
+
+          <a href="admin-bookings.html" class="view-link">
+            View All
+          </a>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Customer</th>
+                <th>Route</th>
+                <th>Date</th>
+                <th>Driver</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>#TRV1001</td>
+                <td>Rahul Shetty</td>
+                <td>Udupi → Mangalore</td>
+                <td>24 Jul 2026</td>
+                <td>John D'Souza</td>
+                <td>₹1,250</td>
+
+                <td>
+                  <span class="booking-status completed">
+                    Completed
+                  </span>
+                </td>
+
+                <td>
+                  <button class="action-button">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>#TRV1002</td>
+                <td>Anita Rao</td>
+                <td>Manipal → Airport</td>
+                <td>24 Jul 2026</td>
+                <td>Ravi Kumar</td>
+                <td>₹2,100</td>
+
+                <td>
+                  <span class="booking-status ongoing">
+                    Ongoing
+                  </span>
+                </td>
+
+                <td>
+                  <button class="action-button">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>#TRV1003</td>
+                <td>Sarah Pinto</td>
+                <td>Udupi → Manipal</td>
+                <td>25 Jul 2026</td>
+                <td>Not Assigned</td>
+                <td>₹450</td>
+
+                <td>
+                  <span class="booking-status pending">
+                    Pending
+                  </span>
+                </td>
+
+                <td>
+                  <button class="assign-button">
+                    Assign
+                  </button>
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>#TRV1004</td>
+                <td>Mohammed Ali</td>
+                <td>Mangalore → Udupi</td>
+                <td>25 Jul 2026</td>
+                <td>Suresh Naik</td>
+                <td>₹1,300</td>
+
+                <td>
+                  <span class="booking-status confirmed">
+                    Confirmed
+                  </span>
+                </td>
+
+                <td>
+                  <button class="action-button">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="admin.js"></script>
+
+</body>
+
+</html>

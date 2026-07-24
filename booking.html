@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rejoice Transport Booking</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+  <div class="booking-layout">
+
+    <div class="booking-form">
+
+      <h2>Book Your Ride</h2>
+
+      <label for="pickup">Pickup Location</label>
+      <input
+        type="text"
+        id="pickup"
+        placeholder="Example: Manipal"
+      >
+
+      <label for="drop">Drop Location</label>
+      <input
+        type="text"
+        id="drop"
+        placeholder="Example: Mangalore Airport"
+      >
+
+      <label for="tripType">Trip Type</label>
+      <select id="tripType">
+        <option value="local">Local</option>
+        <option value="outstation">Outstation</option>
+        <option value="airport">Airport</option>
+      </select>
+
+      <label for="pickupDate">Pickup Date and Time</label>
+      <input type="datetime-local" id="pickupDate">
+
+      <button type="button" id="calcFareBtn">
+        Calculate Route and Fare
+      </button>
+
+      <p id="formError" class="error hidden"></p>
+
+      <div id="fareResult" class="fare-result hidden">
+
+        <p>
+          Distance:
+          <strong id="distanceOut">--</strong>
+        </p>
+
+        <p>
+          Estimated Time:
+          <strong id="timeOut">--</strong>
+        </p>
+
+        <p>
+          Estimated Fare:
+          <strong id="fareOut">--</strong>
+        </p>
+
+      </div>
+
+      <label for="customerName">Customer Name</label>
+      <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your name"
+      >
+
+      <label for="customerPhone">Phone Number</label>
+      <inputtype="tel" id="customerPhone"placeholder="Enter your phone number">
+
+      <button type="button" id="sendBookingBtn">
+        Send Booking on WhatsApp
+      </button>
+
+      <small>
+        Fare and travel time are estimates. Final cost may vary due to
+        traffic, tolls, waiting charges and route changes.
+      </small>
+
+    </div>
+
+    <div id="map"></div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>User Dashboard | Travello</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="logo">
+        <i class="fa-solid fa-car-side"></i>
+        <span>Travello</span>
+      </div>
+
+      <nav class="sidebar-menu">
+
+        <a href="#" class="menu-link active">
+          <i class="fa-solid fa-house"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="booking.html" class="menu-link">
+          <i class="fa-solid fa-taxi"></i>
+          <span>Book a Trip</span>
+        </a>
+
+        <a href="upcoming.html" class="menu-link">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Upcoming Trips</span>
+        </a>
+
+        <a href="history.html" class="menu-link">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>Booking History</span>
+        </a>
+        <a href="user.html" class="menu-link">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </button>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-header">
+
+        <button class="menu-button" id="menuButton">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div>
+          <h1>Welcome back, Renee</h1>
+          <p>Manage your trips and bookings</p>
+        </div>
+
+        <div class="profile-box">
+          <div class="profile-image">R</div>
+
+          <div class="profile-details">
+            <strong>Renee</strong>
+            <span>Customer</span>
+          </div>
+        </div>
+
+      </header>
+
+
+      <!-- Dashboard Summary -->
+      <section class="summary-grid">
+
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+
+          <div>
+            <p>Total Trips</p>
+            <h2>12</h2>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+
+          <div>
+            <p>Upcoming Trips</p>
+            <h2>2</h2>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+
+          <div>
+            <p>Total Spent</p>
+            <h2>₹8,450</h2>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <div>
+            <p>Reward Points</p>
+            <h2>240</h2>
+          </div>
+        </div>
+
+      </section>
+  
+ <section class="scratch-section">
+
+    <div class="scratch-left">
+
+        <span class="badge">
+            🎁 DAILY REWARD
+        </span>
+
+        <h2>Scratch & Win</h2>
+
+        <p>
+            Scratch the card below and reveal your lucky reward.
+        </p>
+        </div>
+<div class="scratch-card" id="scratchCard">
+
+  <div class="reward-card">
+    <p>🎉 Congratulations!</p>
+
+    <h2>10% OFF</h2>
+
+    <span>On your next taxi booking</span>
+
+    <div class="coupon">
+      <strong id="couponCode">TRAVEL10</strong>
+
+      <button type="button" id="copyCoupon">
+        Copy
+      </button>
+    </div>
+  </div>
+
+  <canvas id="scratchCanvas"></canvas>
+
+</div>
+</section>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+<script src="scratch.js"></script>
+
+</body>
+</html>
